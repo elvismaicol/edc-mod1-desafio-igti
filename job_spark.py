@@ -13,7 +13,7 @@ censo = (
     .option("header", True)
     .option("inferSchema", True)
     .option("delimiter", "|")
-    .load("s3://datalake-elvis-920036772581/raw-data/censo2020/matricula_*.CSV")
+    .load("s3://datalake-elvis-desafio-igti-estudo-920036772581/raw-data/censo2020/matricula_*.CSV")
 )
 
 (
@@ -22,5 +22,5 @@ censo = (
     .mode("overwrite")
     .format("parquet")
     .partitionBy("CO_UF")
-    .save("s3://datalake-elvis-920036772581/staging/censo2020")
+    .save("s3://datalake-elvis-desafio-igti-estudo-920036772581/staging/censo2020")
 )
